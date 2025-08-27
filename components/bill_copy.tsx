@@ -14,7 +14,7 @@ import { useRouter } from "next/navigation";
 import CopyButton from "./copyButton";
 import { useOrder } from "../context/layoutProvider";
 
-export default function BillModal() {
+export default function TempBillModal() {
   const router = useRouter();
   const { order, setOrder } = useOrder();
   const dialogRef = useRef<HTMLDialogElement>(null);

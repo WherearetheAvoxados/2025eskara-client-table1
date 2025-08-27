@@ -1,11 +1,18 @@
 /* Drawer의 실제 Paper에 스타일 주기 */
 .drawerPaper :global(.MuiDrawer-paper) {
-  width: 50vw; /* 화면의 50% */
+  width: 40vw; /* 화면의 50% */
   max-width: 720px; /* (선택) 너무 넓어지는 것 방지 */
   height: 100%;
   display: flex;
   flex-direction: column; /* header / list / footer 세로 배치 */
   box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .drawerPaper :global(.MuiDrawer-paper) {
+    width: 70vw; /* 모바일에서는 70% */
+    max-width: none; /* 필요하면 max-width 제한 해제 */
+  }
 }
 
 /* 상단 헤더 */
