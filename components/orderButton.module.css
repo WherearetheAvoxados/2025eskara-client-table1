@@ -1,0 +1,40 @@
+.orderButton {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  background: #f4d781;
+  color: #fff;
+  font-weight: 700;
+  padding: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  padding-top: 1.2rem;
+}
+.counter {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch; /* 자식들이 세로로 꽉 차도록 */
+  height: 100%;
+}
+
+.counter button {
+  flex: 1;
+  width: 2rem;
+  color: white;
+  background-color: #f4d781;
+  border: none;
+  font-size: 1.3rem;
+}
+
+.counter button.minus::before {
+  content: "";
+  display: block;
+  width: 0.7rem; /* 길이 */
+  height: 0.13rem; /* 두께 */
+  background: white;
+  margin: auto;
+}

@@ -1,0 +1,13 @@
+.mordal {
+  width: min(100vw);
+  height: min(1000vw);
+  max-width: 300px;
+  margin-top: 20px;
+  border-radius: 5px;
+  border: none;
+  padding: 0;
+}
+
+.mordal::backdrop {
+  background: rgba(0, 0, 0, 0.7);
+}

@@ -1,0 +1,25 @@
+.modalContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #fff; /* 모달 내부 배경 */
+}
+
+.modalContent {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem; /* 본문 여백은 자유 */
+  color: grey;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  white-space: pre-line;
+}
+
+.modalFooter {
+  margin-top: auto;
+  padding: 0; /* ✅ 버튼과 모달 사이 틈 제거 */
+}
+
+.orderButton:hover {
+  background: #1d4ed8;
+}

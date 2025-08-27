@@ -1,0 +1,98 @@
+.header {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(253 225 139);
+  background: linear-gradient(to top, #fde18b, #f9d26d);
+  font-weight: bold;
+  position: relative; /* 햄버거 버튼 absolute 기준 */
+  padding-left: 12px;
+  padding-top: 1px;
+}
+
+.left {
+  display: flex;
+  align-items: center; /* 수직 정렬 */
+  justify-content: flex-start; /* 맨 왼쪽 정렬 */
+  cursor: pointer;
+}
+
+.title {
+  font-size: 20px;
+  color: white;
+  padding-top: 1px;
+}
+
+.right {
+  display: flex;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px; /* 햄버거 버튼 크기 */
+  color: black;
+  position: relative;
+  right: 12px; /* 오른쪽 여백 */
+}
+
+.avatar_container {
+  margin-top: 0.3rem;
+  margin-right: 0.2rem;
+}
+
+/* MUI의 기본 회색 배경을 덮어쓰기 */
+.order_avatar:global(.MuiAvatar-colorDefault) {
+  background-color: rgb(226, 78, 81);
+  width: 1rem;
+  height: 1rem;
+  font-size: 0.7rem;
+  position: absolute;
+  top: -3px;
+  right: -6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  z-index: 1;
+}
+
+.menu_avatar:global(.MuiAvatar-colorDefault) {
+  width: 35px;
+  height: 35px;
+  background-color: #f2f2f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* 햄버거 아이콘 */
+.hamburger {
+  width: 20px;
+  height: 2px;
+  background: #333;
+  border-radius: 2px;
+  position: relative;
+}
+
+.hamburger span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #333;
+  border-radius: 2px;
+}
+
+.hamburger span:nth-child(1) {
+  top: -6px;
+}
+
+.hamburger span:nth-child(2) {
+  top: 0;
+}
+
+.hamburger span:nth-child(3) {
+  top: 6px;
+}

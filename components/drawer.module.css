@@ -1,0 +1,54 @@
+/* Drawer의 실제 Paper에 스타일 주기 */
+.drawerPaper :global(.MuiDrawer-paper) {
+  width: 50vw; /* 화면의 50% */
+  max-width: 720px; /* (선택) 너무 넓어지는 것 방지 */
+  height: 100%;
+  display: flex;
+  flex-direction: column; /* header / list / footer 세로 배치 */
+  box-sizing: border-box;
+}
+
+/* 상단 헤더 */
+.drawerHeader {
+  padding: 16px;
+  background: #c42f29;
+  color: #fff;
+  font-weight: 700;
+}
+
+/* 리스트 영역: 남는 공간 채우고 스크롤 */
+.drawerList {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 12px;
+}
+
+/* 하단 고정 영역 */
+.drawerFooter {
+  margin-top: auto; /* 항상 맨 아래 */
+  padding: 10px;
+  background: #fff;
+  /* opacity: 0; */
+}
+
+/* AlertButton이 렌더하는 버튼을 꽉 채우고 스타일링 */
+.drawerFooter button {
+  width: 100%;
+  padding: 12px 0;
+  background: #c42f29;
+  color: #fff;
+  font-weight: 700;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+/* 모바일 대응 */
+@media (max-width: 640px) {
+  .drawerPaper :global(.MuiDrawer-paper) {
+    width: 90vw; /* 필요시 100vw로 */
+    max-width: none;
+  }
+}
