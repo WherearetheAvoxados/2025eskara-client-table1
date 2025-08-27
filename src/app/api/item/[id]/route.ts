@@ -1,5 +1,8 @@
 import { NextResponse } from "next/server";
 
+export const runtime = "nodejs";
+export const config = { regions: ["icn1"] };
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export async function GET(req: Request, { params }: any) {
   const { id } = await params;

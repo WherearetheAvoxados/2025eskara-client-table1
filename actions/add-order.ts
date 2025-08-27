@@ -1,5 +1,8 @@
 "use server";
 
+export const runtime = "nodejs";
+export const config = { regions: ["icn1"] };
+
 import { adminDb } from "../util/firebase-admin";
 
 export default async function addOrder(order: Record<string, number>) {
