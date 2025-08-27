@@ -1,0 +1,20 @@
+/* reset */
+html,
+body {
+  margin: 0; /* ← 이 한 줄이 핵심 */
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* iOS 노치/홈바 안전영역(선택) */
+@supports (padding: max(0px)) {
+  body {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+}
