@@ -45,7 +45,7 @@ export default function Header() {
           width={0}
           height={0}
           sizes="7rem"
-          style={{ width: "4rem", height: "auto" }}
+          style={{ width: "3.2rem", height: "auto" }}
         ></Image>
         <Image
           src={"/title.jpeg"}
@@ -62,7 +62,7 @@ export default function Header() {
           width={0}
           height={0}
           sizes="7rem"
-          style={{ width: "4rem", height: "auto" }}
+          style={{ width: "3.2rem", height: "auto" }}
         ></Image>
       </div>
       <button className={style.right} onClick={onOrderClick}>
