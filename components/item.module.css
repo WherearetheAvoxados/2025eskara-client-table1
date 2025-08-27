@@ -1,0 +1,15 @@
+/* 그리드(두 칼럼) */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+/* 카드 썸네일 박스: 가로에 맞춰 정사각형 */
+.thumb {
+  position: relative; /* Image fill 쓸 때 반드시 필요 */
+  width: 100%;
+  aspect-ratio: 4 / 4; /* 비율 고정 (예: 4:3) → 원본 비율 맞추고 싶으면 바꿔도 됨 */
+  border-radius: 8px;
+  overflow: hidden; /* 넘치는 부분 잘라내기 */
+}

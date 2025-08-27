@@ -2,7 +2,7 @@
 
 import styles from "./orderButton.module.css";
 import { useState } from "react";
-import { useOrder } from "@/app/(with-header)/layout";
+import { useOrder } from "../context/layoutProvider";
 import { useRouter } from "next/navigation";
 
 export default function OrderButton({ id }: { id: string }) {
@@ -43,7 +43,9 @@ export default function OrderButton({ id }: { id: string }) {
     <div className={styles.orderButton}>
       <div onClick={onOrderClick}>{count}개 장바구니 담기</div>
       <div className={styles.counter}>
-        <button onClick={onPlusClick}>+</button>
+        <button autoFocus={false} onClick={onPlusClick}>
+          +
+        </button>
         <button className={`${styles.minus}`} onClick={onMinusClick}></button>
       </div>
     </div>

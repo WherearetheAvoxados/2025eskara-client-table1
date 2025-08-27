@@ -6,10 +6,12 @@
   justify-content: center; /* 가로 가운데 */
   align-items: center; /* 세로 가운데 (필요 없으면 제거) */
 }
-
 .mobile_container {
   width: 100%;
-  max-width: 430px; /* 모바일 화면 폭 */
-  min-height: 100vh; /* 전체 높이 */
-  background: white; /* 내부는 흰색 */
+  max-width: 430px;
+  min-height: 100vh;
+  background: #fff;
+  margin: 0 auto;
+  overflow-x: hidden; /* ✨ 가로 넘침 방지 */
+  box-sizing: border-box;
 }

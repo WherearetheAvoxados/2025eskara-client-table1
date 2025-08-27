@@ -12,7 +12,7 @@ import { createPortal } from "react-dom";
 import { useRef } from "react";
 import { useRouter } from "next/navigation";
 import CopyButton from "./copyButton";
-import { useOrder } from "@/app/(with-header)/layout";
+import { useOrder } from "../context/layoutProvider";
 
 export default function BillModal() {
   const router = useRouter();

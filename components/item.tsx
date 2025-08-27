@@ -1,5 +1,6 @@
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import style from "./item.module.css";
 
 export default function Item({
   path,
@@ -32,15 +33,16 @@ export default function Item({
   return (
     <>
       <div style={{ padding: "10px", cursor: "pointer" }} onClick={onClick}>
-        <Image
-          src={path}
-          alt=""
-          width={0}
-          height={0}
-          sizes="195px" // 브라우저에게 렌더 폭 힌트
-          style={{ width: "195px", height: "auto", borderRadius: "5px" }} // 비율 유지
-          priority
-        />
+        <div className={style.thumb}>
+          <Image
+            src={path}
+            alt=""
+            fill
+            sizes="(max-width: 430px) 50vw, 195px"
+            style={{ objectFit: "cover", borderRadius: 8 }}
+            priority
+          />
+        </div>
         <div>
           <div
             style={{
@@ -53,7 +55,6 @@ export default function Item({
             <div>{price}</div>
           </div>
         </div>
-
         <div style={{ fontSize: "10px", color: "rgb(161 161 165)" }}>
           상세정보는 클릭하세요!
         </div>

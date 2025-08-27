@@ -9,7 +9,7 @@ export default async function ItemPage({ p_id }: { p_id: string }) {
   const proto = h.get("x-forwarded-proto") ?? "http"; // dev는 보통 http
 
   const res = await fetch(`${proto}://${host}/api/item/${p_id}`, {
-    cache: "no-store", // 빌드 타임 호출 방지 (항상 런타임)
+    cache: "force-cache", // 빌드 타임 호출 방지 (항상 런타임)
   });
   if (!res.ok) throw new Error("API failed");
   const data = await res.json();

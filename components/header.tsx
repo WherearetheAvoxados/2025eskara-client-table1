@@ -2,7 +2,7 @@
 
 import React from "react";
 import style from "./header.module.css";
-import { useDrawer, useOrder } from "../src/app/(with-header)/layout";
+import { useDrawer, useOrder } from "../context/layoutProvider";
 import { Avatar } from "@mui/material";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
