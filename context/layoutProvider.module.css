@@ -1,0 +1,20 @@
+/* page.module.css */
+.wrapper {
+  background-color: #e5e5e5; /* 바깥 배경 어둡게 */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center; /* 가로 가운데 */
+  align-items: center; /* 세로 가운데 (필요 없으면 제거) */
+}
+.mobile_container {
+  width: 100%;
+  min-height: 100vh;
+  background: white;
+}
+
+@media (min-width: 768px) {
+  .mobile_container {
+    max-width: 430px; /* 태블릿 이상에서는 중앙에 카드형으로 */
+    margin: 0 auto; /* 중앙 정렬 */
+  }
+}

@@ -7,7 +7,7 @@ import {
   SetStateAction,
 } from "react";
 import Header from "../components/header";
-import style from "../src/app/(with-header)/layout.module.css";
+import style from "./layoutProvider.module.css";
 import React from "react";
 
 type DrawerContextType = {

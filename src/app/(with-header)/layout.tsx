@@ -1,3 +1,5 @@
+import style from "./layout.module.css";
+
 export const viewport = {
   width: "device-width",
   initialScale: 1,
@@ -15,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html>
-      <body>
+      <body className={style.safeArea}>
         <DrawerProvider mordal={mordal}>{children}</DrawerProvider>
       </body>
     </html>
