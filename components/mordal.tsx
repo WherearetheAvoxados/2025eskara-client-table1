@@ -36,7 +36,12 @@ export default function Modal({ children }: { children: ReactNode }) {
     }
   };
   return createPortal(
-    <dialog ref={dialogRef} className={style.mordal} onClick={onClick}>
+    <dialog
+      ref={dialogRef}
+      className={style.mordal}
+      onClick={onClick}
+      tabIndex={-1}
+    >
       {children}
     </dialog>,
     modalRoot
