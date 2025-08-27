@@ -1,10 +1,16 @@
 .modalContainer {
   display: flex;
   flex-direction: column;
-  height: 100dvh;
-  background: #fff; /* 모달 내부 배경 */
-}
 
+  /* ✅ 뷰포트 높이 버그 대비 3종 세트 */
+  min-height: 100svh; /* 가장 안전한 최소값 */
+  height: 100dvh; /* 주소창 내려갔을 때 동적 높이 */
+  height: -webkit-fill-available; /* iOS Safari fallback */
+
+  background: #fff;
+  /* iOS overscroll이 레이아웃 밀지 않게 */
+  overflow: hidden;
+}
 .modalContent {
   flex: 1;
   overflow-y: auto;
@@ -17,5 +23,12 @@
 
 .modalFooter {
   margin-top: auto;
-  padding: 0; /* ✅ 버튼과 모달 사이 틈 제거 */
+
+  position: sticky;
+  bottom: 0;
+
+  /* iOS 하단 제스처 영역(홈 바) 침범 방지 */
+  padding-bottom: env(safe-area-inset-bottom, 0px); /* ✅ 중요 */
+  /* background: #f3d27a; 예시 */
+  /* 필요시 상하 패딩도 여기에 */
 }
