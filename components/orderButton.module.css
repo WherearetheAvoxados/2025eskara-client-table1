@@ -13,12 +13,8 @@
   cursor: pointer;
   transition: background 0.2s;
   padding-top: 1.2rem;
-  outline: none;
-  box-shadow: none;
 }
-.orderButton:focus {
-  outline: none;
-}
+
 .counter {
   display: flex;
   flex-direction: row;

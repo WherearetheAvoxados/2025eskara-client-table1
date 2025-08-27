@@ -1,6 +1,7 @@
 .mordal {
   width: min(100vw, 430px); /* 모바일 전체 or 최대 폭 제한 */
-  max-height: 100dvh; /* 브라우저 보이는 높이 꽉 차게 */
+  max-height: 90dvh; /* 브라우저 보이는 높이 꽉 차게 */
+  max-width: 80dvw;
   margin: 20px auto; /* 위에서 20px 띄우고 가운데 정렬 */
   border-radius: 5px;
   border: none;
@@ -11,4 +12,15 @@
 
 .mordal::backdrop {
   background: rgba(0, 0, 0, 0.7);
+}
+
+/* 🔽 모달 안 버튼 포커스 효과 제거 */
+.mordal button {
+  outline: none;
+  box-shadow: none;
+}
+
+.mordal button:focus {
+  outline: none;
+  box-shadow: none;
 }

@@ -21,7 +21,6 @@ export default function Modal({ children }: { children: ReactNode }) {
     if (!mounted || !dialogRef.current) return;
     // 여기! 모달 모드로 띄워야 backdrop이 생깁니다.
     if (!dialogRef.current.open) dialogRef.current.showModal();
-    requestAnimationFrame(() => dialogRef.current?.focus());
   }, [mounted]);
 
   if (!mounted || !modalRoot) return null;
