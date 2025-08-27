@@ -1,7 +1,7 @@
 .modalContainer {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 100dvh;
   background: #fff; /* 모달 내부 배경 */
 }
 
@@ -18,8 +18,4 @@
 .modalFooter {
   margin-top: auto;
   padding: 0; /* ✅ 버튼과 모달 사이 틈 제거 */
-}
-
-.orderButton:hover {
-  background: #1d4ed8;
 }
