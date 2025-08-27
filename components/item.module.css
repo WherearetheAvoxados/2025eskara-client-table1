@@ -13,3 +13,11 @@
   border-radius: 8px;
   overflow: hidden; /* 넘치는 부분 잘라내기 */
 }
+
+.menu_name {
+  font-size: 1rem;
+}
+
+.menu_price {
+  font-size: 1rem;
+}

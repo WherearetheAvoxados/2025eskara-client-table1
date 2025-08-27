@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <DrawerComponent />
       <div className={style.main_menu}>
-        <h4>메인메뉴</h4>
+        <h3>메인메뉴</h3>
       </div>
       <div
         style={{

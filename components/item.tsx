@@ -51,11 +51,11 @@ export default function Item({
               justifyContent: "space-between",
             }}
           >
-            <div>{menu_name}</div>
-            <div>{price}</div>
+            <div className={style.menu_name}>{menu_name}</div>
+            <div className={style.menu_price}>{price}</div>
           </div>
         </div>
-        <div style={{ fontSize: "10px", color: "rgb(161 161 165)" }}>
+        <div style={{ fontSize: "12px", color: "rgb(161 161 165)" }}>
           상세정보는 클릭하세요!
         </div>
       </div>

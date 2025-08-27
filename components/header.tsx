@@ -29,9 +29,9 @@ export default function Header() {
           src={"/receipt.png"}
           width={0}
           height={0}
-          sizes="30px"
+          sizes="45px"
           style={{
-            height: "40px",
+            height: "45px",
             width: "auto",
           }}
           alt={""}
@@ -45,7 +45,7 @@ export default function Header() {
           width={0}
           height={0}
           sizes="7rem"
-          style={{ width: "3rem", height: "auto" }}
+          style={{ width: "4rem", height: "auto" }}
         ></Image>
         <Image
           src={"/title.jpeg"}
@@ -53,7 +53,7 @@ export default function Header() {
           width={0}
           height={0}
           sizes="7rem"
-          style={{ width: "8rem", height: "auto" }}
+          style={{ width: "10rem", height: "auto" }}
         ></Image>
         <Image
           className={style.mat}
@@ -62,7 +62,7 @@ export default function Header() {
           width={0}
           height={0}
           sizes="7rem"
-          style={{ width: "3rem", height: "auto" }}
+          style={{ width: "4rem", height: "auto" }}
         ></Image>
       </div>
       <button className={style.right} onClick={onOrderClick}>
