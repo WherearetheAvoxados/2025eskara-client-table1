@@ -18,7 +18,7 @@ export const metadata = {
     images: [
       {
         url: "/title.jpeg", // 썸네일 이미지 URL
-        alt: "썸네일 이미지 설명",
+        alt: "배트와 매트",
       },
     ],
     locale: "ko_KR",
