@@ -29,13 +29,13 @@ export default function OrderButton({ id }: { id: string }) {
     if (id in order) {
       order[id] += count;
       setOrder(order);
+      router.prefetch("/temporder");
     } else {
       setOrder({
         ...order,
         [id]: count,
       });
     }
-
     router.back();
   };
 
