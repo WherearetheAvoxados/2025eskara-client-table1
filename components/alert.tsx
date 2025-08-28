@@ -31,13 +31,13 @@ export default function AlertButton({
     const ok = confirm("주문을 진행할까요? 주문 후 취소는 불가능합니다.");
     if (ok) {
       setOverlay(true); // 오버레이 켜고
-      router.push("/temporder");
-      setTimeout(() => {
-        setOpen(false); // 1초 뒤 이동
-        setTimeout(() => {
-          action(orders).catch(() => {});
-        }, 0);
-      }, 0);
+      setOverlay(true);
+      requestAnimationFrame(() => {
+        router.push("/temporder");
+        setOpen(false);
+        // 저장은 백그라운드
+        setTimeout(() => action(orders).catch(() => {}), 0);
+      });
     }
   };
 
