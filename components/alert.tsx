@@ -33,6 +33,9 @@ export default function AlertButton({
       setOverlay(true); // 오버레이 켜고
       router.push("/temporder");
       action(orders).catch(() => {});
+      setTimeout(() => {
+        setOpen(false);
+      });
     }
   };
 
