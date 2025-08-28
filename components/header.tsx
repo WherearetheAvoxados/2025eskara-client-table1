@@ -40,7 +40,7 @@ export default function Header() {
       </div>
       <div className={style.title}>
         <Image
-          className={style.mat}
+          className={style.logoSide}
           src={"/mat.png"}
           alt=""
           width={0}
@@ -49,6 +49,7 @@ export default function Header() {
           style={{ width: "3.2rem", height: "auto" }}
         ></Image>
         <Image
+          className={style.logoCenter}
           src={"/title.jpeg"}
           alt=""
           width={0}
@@ -57,7 +58,7 @@ export default function Header() {
           style={{ width: "10rem", height: "auto" }}
         ></Image>
         <Image
-          className={style.mat}
+          className={style.logoSide}
           src={"/pat.png"}
           alt=""
           width={0}

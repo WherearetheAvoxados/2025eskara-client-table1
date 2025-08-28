@@ -1,14 +1,64 @@
+/* ---------- 공통 변수: 헤더 높이를 반응형으로 ---------- */
 .header {
-  height: 75px;
+  --header-h: clamp(56px, 13vw, 75px);
+  height: var(--header-h);
+}
+/* ---------- 헤더 바탕 ---------- */
+.header {
+  height: var(--header-h);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: rgb(253 225 139);
   background: linear-gradient(to top, #fde18b, #f9d26d);
-  font-weight: bold;
-  position: relative; /* 햄버거 버튼 absolute 기준 */
+  font-weight: 700;
+  position: relative;
   padding-left: 12px;
   padding-top: 1px;
+  overflow: hidden; /* 혹시 모를 넘침 컷 */
+}
+
+/* 좌측/우측 버튼들도 헤더 높이에 맞춰 자동 축소 */
+.left img,
+.right :global(.MuiAvatar-root) {
+  height: calc(var(--header-h) - 24px);
+  width: auto;
+}
+
+/* ---------- 가운데 타이틀 영역 ---------- */
+.title {
+  flex: 1; /* 가운데 영역이 남는 폭을 먹음 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(4px, 2vw, 12px); /* 여백도 반응형 */
+  min-width: 0; /* 넘침 방지 */
+}
+
+/* 타이틀 안의 모든 이미지: 높이 기준으로 반응형, 비율 유지 */
+.title img {
+  height: calc(var(--header-h) - 18px); /* 헤더 높이에 맞게 */
+  width: auto;
+  object-fit: contain; /* 원본 비율 유지 */
+  max-width: 100%;
+}
+
+/* 마스코트(좌/우)와 중앙 로고를 구분해서 조금 더 세밀하게 */
+.logoSide {
+  /* 좌/우 마스코트 */
+  height: calc(var(--header-h) - 22px);
+}
+
+.logoCenter {
+  /* 가운데 로고(글자) */
+  height: calc(var(--header-h) - 14px);
+  max-width: min(60vw, 280px); /* 너무 넓어지지 않게 */
+}
+
+/* ---------- 아주 좁은 화면에서는 마스코트 숨기기 ---------- */
+@media (max-width: 360px) {
+  .logoSide {
+    display: none;
+  }
 }
 
 .left {

@@ -2,4 +2,11 @@
   border-color: rgb(125 139 149);
   border-radius: 5px;
   font-size: 0.8rem;
+  outline: none;
+  color: black;
+}
+
+.copyBtn:focus {
+  outline: none; /* 탭 포커스시에도 제거 */
+  box-shadow: none; /* 사파리/크롬의 기본 파란 그림자 제거 */
 }
