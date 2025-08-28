@@ -1,11 +1,7 @@
 "use client";
-import localFont from "next/font/local";
+
 import { item_state } from "../mock/item_state";
-const BM_HANNA = localFont({
-  src: "../font/BMHANNAAir_ttf.ttf",
-  weight: "400", // ttf라면 weight는 그냥 "400"으로 지정
-  style: "normal",
-});
+
 import style from "./bill.module.css";
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
@@ -15,7 +11,7 @@ import CopyButton from "./copyButton";
 import { doc, onSnapshot } from "firebase/firestore";
 import { db } from "../util/firebase"; // 클라이언트 SDK 초기화한 db
 
-export default function BillModal() {
+export default function BillModal({ fontclass }: { fontclass: string }) {
   const [nowField, setNowField] = useState<Record<string, number>>({});
   useEffect(() => {
     const ref = doc(db, "orders", "CcT7414WHNw6jErkamkC");
@@ -73,7 +69,7 @@ export default function BillModal() {
       <div className={style.inner}>
         {Object.entries(nowField).map(([key, value]) => (
           <div
-            className={`${BM_HANNA.className} ${style.menus_container}`}
+            className={`${fontclass} ${style.menus_container}`}
             key={key + 60}
           >
             <div className={style.menu_name} key={key}>
@@ -87,7 +83,7 @@ export default function BillModal() {
             </div>
           </div>
         ))}
-        <div className={`${BM_HANNA.className} ${style.footer}`}>
+        <div className={`${fontclass} ${style.footer}`}>
           <div> * * * * * * * * * * * * * * * * *</div>
           <div className={style.sum}>
             <div>합계</div>
