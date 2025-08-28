@@ -37,7 +37,7 @@ export default function AlertButton({
         setTimeout(() => {
           action(orders).catch(() => {});
         }, 0);
-      }, 1500);
+      }, 3000);
     }
   };
 
