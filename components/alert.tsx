@@ -26,10 +26,12 @@ export default function AlertButton({
     }
     const ok = confirm("주문을 진행할까요? 주문 후 취소는 불가능합니다.");
     if (ok) {
-      start(() => action(orders)); // 조건 통과 시 서버 액션 실행
       setOpen(false);
       router.push("/temporder");
     }
+    setTimeout(() => {
+      action(orders).catch((e) => console.error("주문 저장 실패:", e));
+    }, 0);
   };
 
   return (
