@@ -7,7 +7,7 @@ export const metadata = {
   description: "배트와 매트 1번 테이블 주문 페이지입니다",
   openGraph: {
     title: "배트와 매트",
-    description: "배트와 매트 1번 테이블 주문 페이지입니다",
+    description: "1번 테이블 주문 페이지입니다",
     siteName: "배트와 매트",
     images: [
       {
