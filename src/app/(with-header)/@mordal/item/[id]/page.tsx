@@ -1,4 +1,3 @@
-import { Suspense } from "react";
 import ItemPage from "../../../../../../components/item_page";
 import Mordal from "../../../../../../components/mordal";
 
