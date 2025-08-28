@@ -1,12 +1,6 @@
 import "../global.css";
 import localFont from "next/font/local";
 
-export const viewport = {
-  width: "device-width",
-  initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
-};
 export const metadata = {
   metadataBase: new URL("https://2025eskara-client-table1.vercel.app/"),
   title: "2025 eskara 배트와 매트 1번 테이블",
@@ -25,6 +19,14 @@ export const metadata = {
     type: "website",
   },
 };
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
+
 const SF_pro = localFont({
   src: "../../../font/SF-Pro.ttf",
   weight: "400",
