@@ -7,5 +7,5 @@ const BM_HANNA = localFont({
   style: "normal",
 });
 export default async function MordalPage() {
-  return <BillModal fontclass={}></BillModal>;
+  return <BillModal fontclass={BM_HANNA.className}></BillModal>;
 }
