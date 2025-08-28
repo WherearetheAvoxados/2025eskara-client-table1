@@ -19,6 +19,12 @@ export default function DrawerComponent() {
       open={open}
       onClose={() => setOpen(false)}
       className={style.drawerPaper}
+      sx={{
+        "& .MuiDrawer-paper": {
+          width: { xs: "78vw", sm: 360, md: 380 }, // 모바일/태블릿/데스크탑
+          maxWidth: 420,
+        },
+      }}
     >
       <Box className={style.drawerHeader}>장바구니</Box>
 
