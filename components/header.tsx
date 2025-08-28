@@ -6,11 +6,13 @@ import { useDrawer, useOrder } from "../context/layoutProvider";
 import { Avatar } from "@mui/material";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 export default function Header() {
   const { open, setOpen } = useDrawer();
   const { order } = useOrder();
   const router = useRouter();
+  const [overlay, setOverlay] = useState(false);
 
   const order_count = Object.keys(order).length;
 
@@ -20,7 +22,11 @@ export default function Header() {
   };
 
   const onBillClick = () => {
+    setOverlay(true);
     router.push("/order");
+    setTimeout(() => {
+      setOverlay(false);
+    }, 1000);
   };
 
   return (
@@ -79,6 +85,19 @@ export default function Header() {
           </div>
         </Avatar>
       </button>
+      {overlay && (
+        <div
+          className={style.fullscreenOverlay}
+          role="dialog"
+          aria-modal="true"
+          aria-label="로딩 중"
+        >
+          <div className={style.overlayCard}>
+            영수증 준비 중…
+            <div className={style.spinner} />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
