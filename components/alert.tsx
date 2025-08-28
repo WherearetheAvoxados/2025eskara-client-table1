@@ -32,12 +32,7 @@ export default function AlertButton({
     if (ok) {
       setOverlay(true); // 오버레이 켜고
       router.push("/temporder");
-      setTimeout(() => {
-        setOpen(false); // 1초 뒤 이동
-        setTimeout(() => {
-          action(orders).catch(() => {});
-        }, 0);
-      }, 2000);
+      action(orders).catch(() => {});
     }
   };
 
